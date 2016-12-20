@@ -11,7 +11,7 @@ workflows:
     - path::./:
         title: Upload dSYM to Raygun
         inputs:
-        - xamarin_insights_api_key: $raygun_api_key
+        - raygun_api_key: $raygun_api_key
         - dsym_path: $dsym_path
         - app_id: $app_id
 
