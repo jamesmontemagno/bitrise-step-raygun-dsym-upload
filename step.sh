@@ -39,4 +39,4 @@ fi
 printf "\e[34mUploading ${zip_dsym_path} to Raygun\e[0m\n"
 
 
-curl -w "Upload returned: %{http_code}\\n" -H "Host: app.raygun.com" -H "Authorization: Basic ${raygun_api_key} --form "DsymFile=@${dsym_path}" "https://app.raygun.com/dashboard/${app_id}/settings/symbols"
+curl -w "Upload returned: %{http_code}\\n" -H "Host: app.raygun.com" -H "Authorization: Basic ${raygun_api_key}" --form "DsymFile=@${dsym_path}" "https://app.raygun.com/dashboard/${app_id}/settings/symbols"
