@@ -10,7 +10,6 @@ host_os_tags:
 project_type_tags:
   - xamarin
   - ios
-  - android
   - mac
 type_tags:
 is_requires_admin_user: false
