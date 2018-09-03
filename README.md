@@ -5,7 +5,7 @@ Raygun dSYM Upload step for [Bitrise](http://bitrise.io) enabled to you automati
 ## Important information
 There are three parameters that must be filled in:
 
-* **raygun_api_key**: This is a Base64 encode of your username:password, you can run the following command in the terminal: ```echo -n 'username:password | openssl base64``` to get it. This is the username and password to Raygun.
+* **raygun_access_token**: External access token can be obtained from Raygun by clicking your name in the top right corner, select "My settings" and then hit "Generate external access token" or copy it if you already have one.
 * **dsym_path**: This is th path to the dSYM zip, automatically set to the default Bitrise path
 * **app_id**: This is the App Id is in the URL to your app when you view it in Raygun. It is usually 6 characters long.
 

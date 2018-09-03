@@ -16,11 +16,11 @@ is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
 inputs:
-  - raygun_api_key:
+  - raygun_access_token:
     opts:
-      title: API Key for Raygun. This is a Base64 encode of your username:password.
+      title: External access token for Raygun.
       description: |
-        This is a Base64 encode of your username:password, you can run the following command in the terminal - 'echo -n 'username:password | openssl base64' to get it
+        External access token can be obtained from Raygun by clicking your name in the top right corner, select "My settings" and then hit "Generate external access token" or copy it if you already have one.
       is_required: true
       is_expand: true
   - app_id:

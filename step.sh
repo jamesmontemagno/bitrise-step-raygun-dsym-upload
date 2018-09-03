@@ -2,8 +2,8 @@
 
 set -e
 
-if [ -z "$raygun_api_key" ]; then
-	printf "\e[31mError: \e[0mraygun_api_key variable not set\n"
+if [ -z "$raygun_access_token" ]; then
+	printf "\e[31mError: \e[0mraygun_access_token variable not set\n"
 	exit 1
 fi
 
@@ -39,4 +39,4 @@ fi
 printf "\e[34mUploading ${zip_dsym_path} to Raygun\e[0m\n"
 
 
-curl -w "Upload returned: %{http_code}\\n" -H "Host: app.raygun.com" -H "Authorization: Basic ${raygun_api_key}" --form "DsymFile=@${dsym_path}" "https://app.raygun.com/dashboard/${app_id}/settings/symbols"
+curl -w "Upload returned: %{http_code}\\n" -H "Host: app.raygun.com" --form "DsymFile=@${dsym_path}" "https://app.raygun.com/dashboard/${app_id}/settings/symbols?authToken=${raygun_api_key}"
